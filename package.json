@@ -1,0 +1,39 @@
+{
+  "name": "dshx-usage-panel",
+  "version": "1.1.0",
+  "private": true,
+  "description": "A DSH settings page showing the DeepSeek account balance and today's token usage.",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "cordis"
+  ],
+  "author": "callaumyan-design",
+  "license": "MIT",
+  "homepage": "https://github.com/callaumyan-design/dshx-usage-panel#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/callaumyan-design/dshx-usage-panel.git"
+  },
+  "bugs": {
+    "url": "https://github.com/callaumyan-design/dshx-usage-panel/issues"
+  },
+  "type": "module",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-settings"
+      ]
+    }
+  }
+}
